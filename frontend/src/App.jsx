@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar'
+import Home from './pages/home/Home'
+import Contact from './pages/contact/Contact'
+import Carousel from './components/Carousel'
+import './App.css'
 
 function App() {
 
@@ -9,6 +11,11 @@ function App() {
   return (
     <>
       <Navbar />
+      <Home />
+      {/* <Contact /> */}
+      {/* <Carousel />
+      <Carousel />
+      <Carousel /> */}
     </>
   )
 }
