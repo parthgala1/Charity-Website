@@ -36,13 +36,13 @@ const Navbar = () => {
                     Who We Are
                 </a>
                 <a href='#what-we-do' className='text-lg decoration-none px-5'>
-                    What We Do
+                    What We Offers
                 </a>
                 <a href='#details' className='text-lg decoration-none px-5'>
-                    Details
+                    Partners
                 </a>
                 <a href='#contact' className='text-lg decoration-none px-5'>
-                    Contact
+                    Contact Us
                 </a>
             </div>
         </div >
