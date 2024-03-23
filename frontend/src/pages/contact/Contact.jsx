@@ -1,5 +1,4 @@
 import React from 'react'
-import photo from '../../assets/images/photo-1682685797088-283404e24b9d.avif'
 import './Contact.css'
 import { FaHome } from "react-icons/fa";
 

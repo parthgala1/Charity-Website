@@ -18,7 +18,7 @@ const SubHome = () => {
     return (
         <div className={`mb-36 px-12 w-full h-full flex justify-center items-end ease-out duration-150`}>
             <div className="">
-                <div className={`flex justify-center items-center ${isScrolled ? 'hidden duration-300' : ''}`}>
+                <div className={`flex justify-center items-center scroll-y-smooth ${isScrolled ? 'hidden duration-300' : ''}`}>
                     <img src={logo} alt="/" className='h-48 w-48' />
                     <div className="flex flex-col items-center">
                         <p className=' text-6xl font-medium font-[Alegreya] text-[#301A0F]'>
