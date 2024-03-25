@@ -34,7 +34,7 @@ const SubHome = () => {
                 <p className=" font-thin font-serif px-3">
                     A Small Foundation made for Jivadaya at gaushala, panjrapor and helping needy people like anath ashrams vrudh ashrams just for a simple cause,
                 </p>
-                <button className="bg-[#301A0F] m-2 p-2 text-center rounded-2xl text-[#9f8266] hover:text-white hover:rounded-3xl duration-300 w-1/2">Donate Now</button>
+                <a href="https://wa.me/919820988506" target="_blank" className="bg-[#301A0F] m-2 p-2 text-center rounded-2xl text-[#9f8266] hover:text-white hover:rounded-3xl duration-300 w-1/2">Donate Now</a>
             </div>
         </div>
     )

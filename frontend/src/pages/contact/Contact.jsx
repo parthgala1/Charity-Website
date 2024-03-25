@@ -27,10 +27,18 @@ const Contact = () => {
                         G-1, Jalaram Ashish, Govind Bachaji Road, Charai, Thane(West).
                     </div>
                     <div className='flex justify-center items-center m-2'>
-                        <FaFacebookSquare className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
-                        <FaSquareWhatsapp className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
-                        <FaInstagramSquare className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
-                        <FaYoutube className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
+                        <a href="https://www.facebook.com/jivamgroup/" target='_blank'>
+                            <FaFacebookSquare className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
+                        </a>
+                        <a href="https://wa.me/919820988506" target='_blank'>
+                            <FaSquareWhatsapp className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
+                        </a>
+                        <a href="" target='_blank'>
+                            <FaInstagramSquare className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCIzFvsIlFretAqZpxySaWlg" target='_blank'>
+                            <FaYoutube className='h-10 w-10 m-3 text-white hover:cursor-pointer hover:scale-105' />
+                        </a>
                     </div>
                 </div>
                 <div className="flex flex-col text-white items-center m-10 font-[Fira Code] ">
@@ -53,7 +61,7 @@ const Contact = () => {
                     <div className='my-10 text-white text-xl w-4/5 text-center'>
                         At the heart of Jivam Group are people like you who are willing to get involved by donating or volunteering. Together we can change the world!
                     </div>
-                    <button className="bg-[#fff] m-2 p-2 text-center rounded-2xl text-[#9f8266] hover:text-[#EFA593] hover:rounded-3xl duration-300 w-1/2">Donate Now</button>
+                    <a href="https://wa.me/919820988506" target="_blank" className="bg-[#fff] m-2 p-2 text-center rounded-2xl text-[#9f8266] hover:text-[#EFA593] hover:rounded-3xl duration-300 w-1/2">Donate Now</a>
                 </div>
             </div>
             <hr className=' w-4/5 m-10' />
