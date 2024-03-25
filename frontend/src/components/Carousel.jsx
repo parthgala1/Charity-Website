@@ -23,7 +23,7 @@ const Carousel = ({ slides }) => {
                 {slides.map((item, index) => (
                     <img
                         key={index}
-                        className={`w-[430px] h-52 shadow-xl shadow-slate-500 absolute top-0 left-0 cursor-pointer ${index === currentIndex ? 'opacity-100 duration-300' : 'opacity-0 duration-300'}`}
+                        className={` w-[430px] h-52 shadow-xl shadow-slate-500 absolute top-0 left-0 cursor-pointer ${index === currentIndex ? 'opacity-100 duration-300' : 'opacity-0 duration-300'}`}
                         src={item.url}
                         alt='/'
                     />

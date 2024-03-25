@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .animate-show {
   animation: show 0.4s linear;
 }

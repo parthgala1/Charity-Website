@@ -5,16 +5,19 @@ import Contact from './pages/contact/Contact'
 import Carousel from './components/Carousel'
 import './App.css'
 import AboutUs from './pages/AboutUs'
+import Impact from './pages/impact/Impact'
 
 function App() {
 
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Home />
       <AboutUs />
-      {/* <Contact /> */}
+      <Contact /> */}
+      <AboutUs />
+      <Impact />
       {/* <Carousel />
       <Carousel />
       <Carousel /> */}

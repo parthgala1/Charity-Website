@@ -36,10 +36,13 @@ const Navbar = () => {
                     Who We Are
                 </a>
                 <a href='#what-we-do' className='text-lg decoration-none px-5'>
-                    What We Offers
+                    What We Offer
+                </a>
+                <a href='#impact' className='text-lg decoration-none px-5'>
+                    Our Impact
                 </a>
                 <a href='#details' className='text-lg decoration-none px-5'>
-                    Partners
+                    Members
                 </a>
                 <a href='#contact' className='text-lg decoration-none px-5'>
                     Contact Us

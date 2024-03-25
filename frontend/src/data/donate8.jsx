@@ -1,18 +1,18 @@
-import image1 from '../assets/images/image1.jpg'
-import image5 from '../assets/images/image5.jpg'
-import image7_1 from '../assets/images/image7_1.png'
-export const donate1 = [
+import image8 from '../assets/images/image8.jpg'
+import image4 from '../assets/images/image4.jpg'
+import image7_8 from '../assets/images/image7_8.png'
+export const donate8 = [
     {
         key: 1,
-        url: image1,
+        url: image8,
     },
     {
         key: 2,
-        url: image5,
+        url: image4,
     },
     {
         key: 3,
-        url: image7_1
+        url: image7_8
     },
     {
         key: 4,

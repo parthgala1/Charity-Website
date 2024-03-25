@@ -1,15 +1,19 @@
+import image2 from '../assets/images/image2.jpg';
+import image6 from '../assets/images/image6.jpg';
+import image7_2 from '../assets/images/image7_2.png';
+
 export const donate2 = [
     {
         key: 1,
-        url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+        url: image2,
     },
     {
         key: 2,
-        url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
+        url: image6,
     },
     {
         key: 3,
-        url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
+        url: image7_2,
     },
     {
         key: 4,
