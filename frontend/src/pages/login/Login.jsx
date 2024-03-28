@@ -1,17 +1,10 @@
 import React, { useState } from 'react'
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import useLogin from '../../hooks/useLogin.js';
 
 const Login = () => {
     const [hidePassword, setHidePassword] = useState(true)
-    {/* Login Page
-            username
-            password
-            hide /unhide password
-            Forgot Password
-            Login Button
-            Register Button
-        */}
     const handlePassword = (e) => {
         e.preventDefault();
         !hidePassword ? setHidePassword(true) : setHidePassword(false)
@@ -23,16 +16,20 @@ const Login = () => {
         password: ''
     })
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(user);
+        login(user.username, user.password)
     }
+
+    const { loading, login } = useLogin()
+
+
 
     return (
         <div className="h-screen bg-gradient-to-br from-indigo-600 to-blue-300 flex justify-center items-center">
 
             < div className='rounded-xl bg-slate-100 p-10' >
-                <form className='flex flex-col'>
+                <form onSubmit={handleSubmit} className='flex flex-col'>
                     <div className='text-center font-serif font-thin py-4 text-2xl'>
                         Jivam Group Master Login
                     </div>
@@ -64,7 +61,8 @@ const Login = () => {
                     </div>
 
                     <div className='m-3 flex justify-center '>
-                        <button className='btn p-3 bg-inherit font-serif text-blue-400 hover:text-white text-lg font-semibold btn-ghost btn-outline hover:bg-indigo-400' onClick={handleSubmit} >Signup</button>
+                        <button className='btn p-3 bg-inherit font-serif text-blue-400 hover:text-white text-lg font-semibold btn-ghost btn-outline hover:bg-indigo-400'>
+                            {loading ? <span className='loading loading-spinner' ></span> : 'Login'}</button>
                     </div>
                 </form>
             </div >

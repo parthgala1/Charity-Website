@@ -9,14 +9,14 @@ const useLogout = () => {
   const logout = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/auth/logout", {
+      const res = await fetch("http://localhost:4000/api/auth/logout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
       const data = res.json();
       if (data.error) throw new Error(data.error);
 
-      localStorage.removeItem("chat-user");
+      localStorage.removeItem("jivam-user");
       setAuthUser(null);
     } catch (error) {
       toast.error(error.message);

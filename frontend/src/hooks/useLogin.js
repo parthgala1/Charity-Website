@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useAuthContext } from "../context/AuthContext";
+import { useAuthContext } from "../context/AuthContext.jsx";
 import toast from "react-hot-toast";
 
 const useLogin = () => {
@@ -13,7 +13,7 @@ const useLogin = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("/api/auth/login", {
+      const res = await fetch("http://localhost:4000/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -23,7 +23,7 @@ const useLogin = () => {
 
       if (data.error) throw new Error(data.error);
 
-      localStorage.setItem("chat-user", JSON.stringify(data));
+      localStorage.setItem("jivam-user", JSON.stringify(data));
       setAuthUser(data);
     } catch (error) {
       toast.error(error.message);

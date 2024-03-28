@@ -6,12 +6,13 @@ import Carousel from './components/Carousel'
 import './App.css'
 import AboutUs from './pages/AboutUs'
 import Impact from './pages/impact/Impact'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
+import { AuthContextProvider, useAuthContext } from './context/AuthContext.jsx'
 
 function App() {
-
+  const { authUser } = useAuthContext()
 
   return (
     <>
@@ -25,8 +26,8 @@ function App() {
             <Contact />
           </div>
         } />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={authUser ? <Navigate to='/' /> : <Login />} />
+        <Route path="/register" element={authUser ? <Navigate to='/' /> : <Register />} />
       </Routes>
       {/* <Carousel />
       <Carousel />
