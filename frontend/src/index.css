@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  background-color: white;
+  color: black;
+}
+
 .animate-show {
   animation: show 0.4s linear;
 }

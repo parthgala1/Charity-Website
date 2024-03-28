@@ -23,7 +23,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className='mt-0 rounded opacity-75 hover:opacity-100 duration-200 fixed top-0 left-0 right-0 z-50 min-w-96 p-3 m-1 border-collapse border-b-1 shadow-sm bg-white border-gray-600 flex justify-between items-center  font-[Poppins]'>
+        <div className=' shadow-lg mt-0 rounded opacity-75 hover:opacity-100 duration-200 fixed top-0 left-0 right-0 z-50 min-w-96 p-3 m-1 border-collapse border-b-1 bg-white border-gray-600 flex justify-between items-center  font-[Poppins]'>
             <div className={`flex justify-center items-center duration-300 ${isScrolled ? 'opacity-1' : 'opacity-0'}`}>
                 <img src={logo} alt="/" className='h-12 w-12' />
                 <p className=' text-3xl font-medium'>Jivam Group</p>
