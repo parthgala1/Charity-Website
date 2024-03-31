@@ -3,7 +3,7 @@ import photo from '../assets/images/whoweare.jpg'
 
 const AboutUs = () => {
     return (
-        <div id='who-we-are' className='h-screen flex justify-start items-center relative'>
+        <div id='who-we-are' className='h-screen flex justify-start items-center'>
             <img src={photo} alt="/" className='w-3/5 z-10 object-cover rounded-r-md' />
             <div className='absolute top-auto right-0 w-1/2 h-3/5 flex flex-col justify-start items-center z-40 px-2 -rotate-90'>
                 <p className='w-auto mt-2 text-center text-6xl font-serif font-semibold'>Who We Are</p>

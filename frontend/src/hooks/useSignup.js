@@ -26,15 +26,15 @@ const useSignup = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/auth/signup", {
+      const res = await fetch("http://localhost:4000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          fullName: fullName,
+          name: name,
           username,
           password,
           confirmPassword,
-          gender,
+          member,
         }),
       });
 
@@ -62,13 +62,13 @@ const useSignup = () => {
 export default useSignup;
 
 function handleInputErrors({
-  fullName,
+  name,
   username,
   password,
   confirmPassword,
-  gender,
+  member,
 }) {
-  if (!fullName || !username || !password || !confirmPassword || !gender) {
+  if (!name || !username || !password || !confirmPassword || !member) {
     toast.error("Please fill all the feilds");
     return false;
   }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import useSignup from '../../hooks/useSignup.js';
 
 const Register = () => {
     const [hidePassword, setHidePassword] = useState(true)
@@ -24,16 +25,18 @@ const Register = () => {
         member: 'Member'
     })
 
-    const handleSubmit = (e) => {
+    const { loading, signup } = useSignup();
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(user);
+        await signup(user);
     }
 
     return (
         <div className="h-screen bg-gradient-to-br from-indigo-600 to-blue-300 flex justify-center items-center">
 
             < div className='rounded-xl bg-slate-100 p-10 px-10' >
-                <form className='flex flex-col'>
+                <form onSubmit={handleSubmit} className='flex flex-col'>
                     <div className='text-center font-serif font-thin py-4 text-2xl'>
                         Jivam Group Master Signup
                     </div>
@@ -85,7 +88,7 @@ const Register = () => {
                             <span className="label-text">Member</span>
                             <input
                                 type="checkbox"
-                                className="toggle [--tglbg:lavender] bg-blue-500 hover:bg-blue-500"
+                                className="toggle [--tglbg:white] bg-blue-500 hover:bg-blue-500"
                                 onClick={handleChange}
                                 onChange={(e) => setUser({ ...user, member: e.target.checked ? 'Non-Member' : 'Member' })}
                             />
@@ -96,7 +99,9 @@ const Register = () => {
                         <Link to="/login">Don't Have an Account?</Link>
                     </div>
                     <div className='m-3 flex justify-center '>
-                        <button className='btn p-3 bg-inherit font-serif text-blue-400 hover:text-white text-lg font-semibold btn-ghost btn-outline hover:bg-indigo-400' onClick={handleSubmit} >Signup</button>
+                        <button className='btn p-3 bg-inherit font-serif text-blue-400 hover:text-white text-lg font-semibold btn-ghost btn-outline hover:bg-indigo-400' disabled={loading}>
+                            {loading ? <span className='loading loading-spinner' ></span> : "Sign Up"}
+                        </button>
                     </div>
                 </form>
             </div >

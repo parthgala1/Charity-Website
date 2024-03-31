@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
     return (
-        <div id='contact' className=' flex flex-col justify-center items-center h-[90vh] bg-[#EFA593]'>
+        <div id='contact' className='flex flex-col justify-center items-center h-[90vh] bg-[#EFA593]'>
             <div className='w-3/5 flex justify-center items-center' >
                 <div className="flex flex-col justify-center items-center m-10">
                     <img src={logoWhite} className='size-32 my-10' alt="" />
