@@ -42,22 +42,42 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="flex flex-col text-white items-center m-10 font-[Fira Code] ">
-                    <a href='#home' className='text-lg decoration-none px-5'>
-                        Home
-                    </a>
-                    <a href='#who-we-are' className='decoration-none px-5'>
-                        Who We Are
-                    </a>
-                    <a href='#what-we-do' className='decoration-none px-5'>
-                        What We Offer
-                    </a>
-                    <a href='#details' className='decoration-none px-5'>
-                        Members
-                    </a>
-                    <a href='#contact' className='decoration-none px-5'>
-                        Contact Us
-                    </a>
-
+                    <div className='flex w-full px-32 justify-between items-center'>
+                        <div className='flex flex-col text-center'>
+                            <a href='#home' className='text-lg decoration-none px-5'>
+                                Home
+                            </a>
+                            <a href='#who-we-are' className='decoration-none px-5'>
+                                Who We Are
+                            </a>
+                            <a href='#what-we-do' className='decoration-none px-5'>
+                                What We Offer
+                            </a>
+                            <a href='#details' className='decoration-none px-5'>
+                                Members
+                            </a>
+                            <a href='#contact' className='decoration-none px-5'>
+                                Contact Us
+                            </a>
+                        </div>
+                        <div className='flex flex-col text-center' >
+                            <a href='#home' className='text-lg decoration-none px-5'>
+                                Home
+                            </a>
+                            <a href='#who-we-are' className='decoration-none px-5'>
+                                Who We Are
+                            </a>
+                            <a href='#what-we-do' className='decoration-none px-5'>
+                                What We Offer
+                            </a>
+                            <a href='#details' className='decoration-none px-5'>
+                                Members
+                            </a>
+                            <a href='#contact' className='decoration-none px-5'>
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
                     <div className='my-10 text-white text-xl w-4/5 text-center'>
                         At the heart of Jivam Group are people like you who are willing to get involved by donating or volunteering. Together we can change the world!
                     </div>

@@ -10,6 +10,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import { AuthContextProvider, useAuthContext } from './context/AuthContext.jsx'
+import AnimatedCursor from 'react-animated-cursor'
 
 function App() {
   const { authUser } = useAuthContext()
@@ -18,12 +19,32 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={
-          <div className=' bg-gradient-to-tl from-slate-300 to-white'>
+          <div className=' bg-gradient-to-t from-slate-300 to-white'>
             <Navbar />
             <Home />
             <AboutUs />
             <Impact />
             <Contact />
+            <AnimatedCursor
+              innerSize={15}
+              outerSize={15}
+              color='157, 209, 128'
+              outerAlpha={0.2}
+              innerScale={0.7}
+              outerScale={5}
+              clickables={[
+                'a',
+                'input[type="text"]',
+                'input[type="email"]',
+                'input[type="number"]',
+                'input[type="submit"]',
+                'input[type="image"]',
+                'label[for]',
+                'select',
+                'textarea',
+                'button',
+                '.link',
+              ]} />
           </div>
         } />
         <Route path="/login" element={authUser ? <Navigate to='/' /> : <Login />} />

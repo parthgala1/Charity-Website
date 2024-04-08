@@ -57,7 +57,7 @@ const Login = () => {
                     </div>
 
                     <div className='m-3 text-sm pl-3 hover:text-blue-600 '>
-                        <Link to="/login">Don't Have an Account?</Link>
+                        <Link to="/register">Don't Have an Account?</Link>
                     </div>
 
                     <div className='m-3 flex justify-center '>

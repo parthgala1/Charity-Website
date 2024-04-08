@@ -7,3 +7,7 @@
     left: 40;
     top: 0;
 }
+
+.clip-polygon {
+    clip-path: polygon(10% 10%, 100% 10%, 100% 100%, 0 100%);
+}

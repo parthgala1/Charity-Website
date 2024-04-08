@@ -96,7 +96,7 @@ const Register = () => {
                         </label>
                     </div>
                     <div className='m-3 text-sm pl-3 hover:text-blue-600 '>
-                        <Link to="/login">Don't Have an Account?</Link>
+                        <Link to="/login">Already Have an Account?</Link>
                     </div>
                     <div className='m-3 flex justify-center '>
                         <button className='btn p-3 bg-inherit font-serif text-blue-400 hover:text-white text-lg font-semibold btn-ghost btn-outline hover:bg-indigo-400' disabled={loading}>
