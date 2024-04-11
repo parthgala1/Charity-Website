@@ -13,6 +13,7 @@ const useSignup = () => {
     password,
     confirmPassword,
     member,
+    profilePicture, // Add profilePicture to the parameters
   }) => {
     const success = handleInputErrors({
       name,
@@ -20,31 +21,37 @@ const useSignup = () => {
       password,
       confirmPassword,
       member,
+      profilePicture, // Pass profilePicture to handleInputErrors
     });
 
     if (!success) return;
 
     setLoading(true);
     try {
+      // Upload profile picture first
+      const pictureData = await uploadProfilePicture(profilePicture);
+
+      // If upload successful, proceed with user registration
       const res = await fetch("http://localhost:4000/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: name,
+          name,
           username,
           password,
           confirmPassword,
+          profilePicture: pictureData.url, // Use uploaded picture URL
           member,
         }),
       });
+      console.log(pictureData.url);
 
-      console.log(res);
       const data = await res.json();
       if (data.error) {
         throw new Error(data.error);
       }
 
-      //localstorage
+      //localStorage
       localStorage.setItem("jivam-user", JSON.stringify(data));
 
       //context
@@ -53,6 +60,28 @@ const useSignup = () => {
       toast.error(error.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  // Function to upload profile picture
+  const uploadProfilePicture = async (file) => {
+    try {
+      const formData = new FormData();
+      formData.append("my_file", file);
+
+      const res = await fetch("http://localhost:4000/api/auth/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
+      return data;
+    } catch (error) {
+      throw new Error("Error uploading profile picture");
     }
   };
 
@@ -66,10 +95,23 @@ function handleInputErrors({
   username,
   password,
   confirmPassword,
+  profilePicture,
   member,
 }) {
-  if (!name || !username || !password || !confirmPassword || !member) {
-    toast.error("Please fill all the feilds");
+  if (
+    !name ||
+    !username ||
+    !password ||
+    !confirmPassword ||
+    !member ||
+    !profilePicture
+  ) {
+    toast.error("Please fill all the fields");
+    return false;
+  }
+
+  if (!profilePicture) {
+    toast.error("Please upload a profile picture");
     return false;
   }
 

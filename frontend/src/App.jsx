@@ -11,6 +11,7 @@ import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import { AuthContextProvider, useAuthContext } from './context/AuthContext.jsx'
 import AnimatedCursor from 'react-animated-cursor'
+import Member from './pages/Members/Member.jsx'
 
 function App() {
   const { authUser } = useAuthContext()
@@ -19,11 +20,12 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={
-          <div className=' bg-gradient-to-t from-slate-300 to-white'>
+          <div className=' bg-gradient-to-t from-slate-100 to-white'>
             <Navbar />
             <Home />
             <AboutUs />
             <Impact />
+            <Member />
             <Contact />
             <AnimatedCursor
               innerSize={15}

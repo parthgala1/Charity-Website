@@ -22,6 +22,7 @@ const Register = () => {
         username: '',
         password: '',
         confirmPassword: '',
+        profilePicture: '',
         member: 'Member'
     })
 
@@ -70,7 +71,7 @@ const Register = () => {
                             value={user.password}
                             onChange={(e) => setUser({ ...user, password: e.target.value })}
                         />
-                        <button className='absolute top-10 right-5' onClick={handlePassword}>{hidePassword ? <FaEyeSlash className='text-slate-600' /> : <FaEye className='text-slate-600' />}</button>
+                        <button className='absolute top-10 right-10 ' onClick={handlePassword}>{hidePassword ? <FaEyeSlash className='text-slate-600' /> : <FaEye className='text-slate-600' />}</button>
                     </div>
                     <div className='mx-3 mb-3 relative'>
                         <label className='opacity-0' >Password</label>
@@ -81,6 +82,16 @@ const Register = () => {
                           max-w-xs relative'
                             value={user.confirmPassword}
                             onChange={(e) => setUser({ ...user, confirmPassword: e.target.value })}
+                        />
+                    </div>
+                    <div className='mx-3 mb-3 '>
+                        <label className='opacity-0' >Profile </label>
+                        <input
+                            type='file'
+                            name='my_file'
+                            className=' bg-inherit input-bordered focus:border-blue-500 w-full 
+                          max-w-xs relative'
+                            onChange={(e) => setUser({ ...user, profilePicture: e.target.files[0] })}
                         />
                     </div>
                     <div className="w-full justify-center form-control">
