@@ -12,6 +12,7 @@ import Register from './pages/register/Register'
 import { AuthContextProvider, useAuthContext } from './context/AuthContext.jsx'
 import AnimatedCursor from 'react-animated-cursor'
 import Member from './pages/Members/Member.jsx'
+import Offer from './pages/Offer/Offer.jsx'
 
 function App() {
   const { authUser } = useAuthContext()
@@ -24,6 +25,7 @@ function App() {
             <Navbar />
             <Home />
             <AboutUs />
+            <Offer />
             <Impact />
             <Member />
             <Contact />
@@ -55,6 +57,7 @@ function App() {
       {/* <Carousel />
       <Carousel />
       <Carousel /> */}
+      {/* <Offer /> */}
     </>
   )
 }

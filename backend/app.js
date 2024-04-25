@@ -60,7 +60,9 @@ app.post("/api/auth/upload", upload.single("my_file"), async (req, res) => {
 //Routes
 import authRoutes from "./routes/auth.routes.js";
 import memberRoutes from "./routes/member.routes.js";
+import impactRouter from "./routes/impact.routes.js";
 app.use("/api/auth", authRoutes);
 app.use("/api/users", memberRoutes);
+app.use("/api/impact", impactRouter);
 
 export { app };

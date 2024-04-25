@@ -1,34 +1,54 @@
-import React from 'react';
-import AwesomeSlider from 'react-awesome-slider';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
-import 'react-awesome-slider/dist/styles.css';
+import React, { useEffect, useState } from 'react';
+import { CiCircleMinus } from 'react-icons/ci';
+import { useAuthContext } from '../context/AuthContext';
+import { useUpdateImpact } from '../hooks/useUpdateImpact';
+import { useDeleteImpact } from '../hooks/useDeleteImpact';
 
-const Slider = () => {
-    const AutoplaySlider = withAutoplay(AwesomeSlider);
+const Slider = ({ slides, impact }) => {
+    const authUser = useAuthContext();
+    const { loading, deleteImpact } = useDeleteImpact();
+    // const { updateImpact } = useUpdateImpact();
+    // const [isDeleting, setIsDeleting] = useState(false);
+    console.log(authUser);
+    const handleSubmit = async () => {
+        console.log("deleted");
+    };
+    // console.log(authUser);
     return (
-        <div>
-            <AutoplaySlider
-                bullets={false} // Hide dots navigation
-                play={true} // Auto play
-                interval={3000} // Auto slide every 2 seconds
-                cancelOnInteraction={false} // should stop playing on user interaction
-                className='size-96 custom-slider'
-            >
-                <div>
-                    <h2>Testimonial 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div className="w-3/5 carousel shadow-lg rounded-box">
+            {slides.map((item, index) => (
+                <div className="carousel-item w-full" id={index}>
+                    <div className=' flex flex-col justify-center items-center w-full text-3xl text-center font-[Poppins] font-light relative'>
+                        {authUser && (
+                            <div className='absolute top-3 right-3'>
+                                <CiCircleMinus
+                                    className='size-7 text-red-800 '
+                                    onClick={handleSubmit}
+                                // disabled={isDeleting}
+                                />
+                            </div>
+                        )}
+                        <div className='w-4/5 m-2 mt-10'>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ex id quis voluptatem labore! Illum vitae a eveniet ab incidunt expedita delectus natus neque, aliquid ad ex, fugit temporibus nemo!
+                        </div>
+                        <div className='bg-gray-300 m-5 w-4/5 h-[0.1px] '></div>
+                        <div className='m-2 mb-10 font-sans flex justify-center items-start'>
+                            <div>
+                                <img src={item.profilePicture} alt='member' className='size-10 mx-2 rounded-full' />
+                            </div>
+                            <div>
+                                {item.name}
+                                <p className='text-lg text-gray-500'>
+                                    {item.member}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h2>Testimonial 2</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div>
-                    <h2>Testimonial 3</h2>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
-            </AutoplaySlider>
+            ))}
         </div>
-    );
+    )
+
 };
 
 export default Slider;
