@@ -62,7 +62,7 @@ const Login = () => {
 
                     <div className='m-3 flex justify-center '>
                         <button className='btn p-3 bg-inherit font-serif text-blue-400 hover:text-white text-lg font-semibold btn-ghost btn-outline hover:bg-indigo-400'>
-                            {loading ? <span className='loading loading-spinner' ></span> : 'Login'}</button>
+                            {loading ? <span className='loading loading-infinity' ></span> : 'Login'}</button>
                     </div>
                 </form>
             </div >

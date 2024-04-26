@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useSignup from '../../hooks/useSignup.js';
 
 const Register = () => {
@@ -10,6 +10,7 @@ const Register = () => {
         !hidePassword ? setHidePassword(true) : setHidePassword(false)
         console.log(hidePassword);
     }
+    const history = useNavigate();
 
     const [checked, setChecked] = React.useState(false);
     const handleChange = (e) => {
@@ -31,6 +32,7 @@ const Register = () => {
         e.preventDefault();
         console.log(user);
         await signup(user);
+        history('/');
     }
 
     return (
@@ -71,7 +73,7 @@ const Register = () => {
                             value={user.password}
                             onChange={(e) => setUser({ ...user, password: e.target.value })}
                         />
-                        <button className='absolute top-10 right-10 ' onClick={handlePassword}>{hidePassword ? <FaEyeSlash className='text-slate-600' /> : <FaEye className='text-slate-600' />}</button>
+                        <button className='absolute top-10 right-14 ' onClick={handlePassword}>{hidePassword ? <FaEyeSlash className='text-slate-600' /> : <FaEye className='text-slate-600' />}</button>
                     </div>
                     <div className='mx-3 mb-3 relative'>
                         <label className='opacity-0' >Password</label>
@@ -89,8 +91,7 @@ const Register = () => {
                         <input
                             type='file'
                             name='my_file'
-                            className=' bg-inherit input-bordered focus:border-blue-500 w-full 
-                          max-w-xs relative'
+                            className='file-input file-input-info file-input-bordered w-full max-w-xs bg-inherit focus:border-2 focus:border-blue-500'
                             onChange={(e) => setUser({ ...user, profilePicture: e.target.files[0] })}
                         />
                     </div>
@@ -111,7 +112,7 @@ const Register = () => {
                     </div>
                     <div className='m-3 flex justify-center '>
                         <button className='btn p-3 bg-inherit font-serif text-blue-400 hover:text-white text-lg font-semibold btn-ghost btn-outline hover:bg-indigo-400' disabled={loading}>
-                            {loading ? <span className='loading loading-spinner' ></span> : "Sign Up"}
+                            {loading ? <span className='loading loading-infinity ' ></span> : "Sign Up"}
                         </button>
                     </div>
                 </form>

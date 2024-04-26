@@ -11,7 +11,6 @@ const useGetMembers = () => {
         const response = await fetch("http://localhost:4000/api/users/");
         const data = await response.json();
         setMembers(data);
-        console.log(members);
         setLoading(false);
       } catch (error) {
         console.error(error);

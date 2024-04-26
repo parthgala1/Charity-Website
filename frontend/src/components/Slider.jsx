@@ -5,11 +5,10 @@ import { useUpdateImpact } from '../hooks/useUpdateImpact';
 import { useDeleteImpact } from '../hooks/useDeleteImpact';
 
 const Slider = ({ slides, impact }) => {
-    const authUser = useAuthContext();
+    const { authUser } = useAuthContext();
     const { loading, deleteImpact } = useDeleteImpact();
     // const { updateImpact } = useUpdateImpact();
     // const [isDeleting, setIsDeleting] = useState(false);
-    console.log(authUser);
     const handleSubmit = async () => {
         console.log("deleted");
     };
@@ -19,7 +18,7 @@ const Slider = ({ slides, impact }) => {
             {slides.map((item, index) => (
                 <div className="carousel-item w-full" id={index}>
                     <div className=' flex flex-col justify-center items-center w-full text-3xl text-center font-[Poppins] font-light relative'>
-                        {authUser && (
+                        {authUser && authUser.member === "Member" && (
                             <div className='absolute top-3 right-3'>
                                 <CiCircleMinus
                                     className='size-7 text-red-800 '

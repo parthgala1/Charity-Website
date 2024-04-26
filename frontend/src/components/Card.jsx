@@ -21,24 +21,26 @@ const Card = ({ member, onDelete }) => {
     };
 
     return (
-        <div className='w-1/4 my-2 p-5'>
-            <div className='rounded-lg hover:bg-white hover:shadow-lg'>
-                <div className='p-4 flex justify-center items-center flex-col relative'>
-                    {authUser && authUser.member === 'Member' && (
-                        <div className='absolute top-3 right-3'>
-                            <CiCircleMinus
-                                className='size-7 text-red-800 '
-                                onClick={handleSubmit}
-                                disabled={isDeleting}
-                            />
-                        </div>
-                    )}
-                    <img src={member.profilePicture} alt='member' className='w-32 h-32 object-cover object-center rounded-full' />
-                    <h2 className='mt-4 text-2xl font-semibold text-center font-serif'>{member.name}</h2>
-                    <p className='text-gray-600 text-center text-md font-mono'>{member.member}</p>
+        <>
+            <div className='w-1/3 my-2 p-5'>
+                <div className='rounded-lg hover:bg-white hover:shadow-lg'>
+                    <div className='p-4 flex justify-center items-center flex-col relative'>
+                        {authUser && authUser.member === 'Member' && (
+                            <div className='absolute top-3 right-3'>
+                                <CiCircleMinus
+                                    className='size-7 text-red-500 font-extrabold active:text-red-900'
+                                    onClick={handleSubmit}
+                                    disabled={isDeleting}
+                                />
+                            </div>
+                        )}
+                        <img src={member.profilePicture} alt='member' className='w-32 h-32 object-cover object-center rounded-full' />
+                        <h2 className='mt-4 text-2xl font-semibold text-center font-serif'>{member.name}</h2>
+                        <p className='text-gray-600 text-center text-md font-mono'>{member.member}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

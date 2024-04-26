@@ -54,8 +54,10 @@ const Navbar = () => {
                     Contact Us
                 </button>
                 {authUser && (
-                    <button onClick={() => scrollToComponent('contact')} className='text-lg decoration-none px-5'>
-                        <TbLogout2 className="w-7 h-7 cursor-pointer text-slate-600" onClick={logout} />
+                    <button onClick={() => scrollToComponent('home')} className='text-lg decoration-none px-5'>
+                        <div>
+                            <img src={authUser.profilePicture} className='size-8 mx-2 rounded-lg' onClick={logout} alt="" />
+                        </div>
                     </button>
                 )}
             </div>
@@ -64,3 +66,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{/* <TbLogout2 className="w-7 h-7 cursor-pointer text-slate-600" onClick={logout} /> */ }

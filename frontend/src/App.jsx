@@ -13,6 +13,7 @@ import { AuthContextProvider, useAuthContext } from './context/AuthContext.jsx'
 import AnimatedCursor from 'react-animated-cursor'
 import Member from './pages/Members/Member.jsx'
 import Offer from './pages/Offer/Offer.jsx'
+import Gaushala from './pages/Places/Gaushala.jsx'
 
 function App() {
   const { authUser } = useAuthContext()
@@ -52,7 +53,8 @@ function App() {
           </div>
         } />
         <Route path="/login" element={authUser ? <Navigate to='/' /> : <Login />} />
-        <Route path="/register" element={authUser ? <Navigate to='/' /> : <Register />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/Gaushala" element={<Gaushala />} />
       </Routes>
       {/* <Carousel />
       <Carousel />

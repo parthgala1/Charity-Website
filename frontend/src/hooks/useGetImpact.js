@@ -11,7 +11,6 @@ export const useGetImpact = () => {
         const response = await fetch("http://localhost:4000/api/impact/");
         const data = await response.json();
         setImpact(data);
-        console.log(impact);
         setLoading(false);
       } catch (error) {
         console.error(error);
