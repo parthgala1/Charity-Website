@@ -18,8 +18,8 @@ const Member = () => {
     return (
         <div id='details' className='h-full my-10 flex flex-col justify-center items-center '>
             <div className='flex flex-col justify-center items-center w-full tex-center'>
-                <h1 className='text-5xl font-semibold font-serif'>Our Helping Hands</h1>
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo atque quo placeat!</h2>
+                <h1 className='text-5xl font-semibold font-serif text-gray-900'>Our Helping Hands</h1>
+                <h2 className='mt-7 text-xl font-serif text-gray-500'>"Behind every success story at Jivam Group are our dedicated and passionate team members."</h2>
             </div>
             <div className='flex flex-wrap justify-center items-center w-full text-center my-10'>
                 {members.map((member, idx) => (
@@ -31,7 +31,7 @@ const Member = () => {
                 ))}
                 {
                     authUser && authUser.member === 'Member' && (
-                        <div className='w-1/3 h-full p-5 flex items-center justify-center'>
+                        <div className='w-1/5 h-full p-5 flex items-center justify-center'>
                             <IoMdAdd className='size-20 text-red-500 active:text-red-300' onClick={handleSubmit} />
                         </div>
                     )

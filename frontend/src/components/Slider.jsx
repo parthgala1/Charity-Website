@@ -17,7 +17,7 @@ const Slider = ({ slides, impact }) => {
         <div className="w-3/5 carousel shadow-lg rounded-box">
             {slides.map((item, index) => (
                 <div className="carousel-item w-full" id={index}>
-                    <div className=' flex flex-col justify-center items-center w-full text-3xl text-center font-[Poppins] font-light relative'>
+                    <div className=' flex flex-col justify-center items-center w-auto text-3xl text-center font-[Poppins] font-light relative'>
                         {authUser && authUser.member === "Member" && (
                             <div className='absolute top-3 right-3'>
                                 <CiCircleMinus
@@ -36,7 +36,7 @@ const Slider = ({ slides, impact }) => {
                                 <img src={item.profilePicture} alt='member' className='size-10 mx-2 rounded-full' />
                             </div>
                             <div>
-                                {item.name}
+                                {item.username}
                                 <p className='text-lg text-gray-500'>
                                     {item.member}
                                 </p>

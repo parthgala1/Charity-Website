@@ -13,7 +13,7 @@ const Impact = () => {
                 <p className='w-auto mt-2 text-center text-6xl font-serif font-semibold'>Our Impact</p>
                 {/* <p className=' w-1/2 text-center text-[30px] font-serif border-dashed rounded leading-normal border-2 border-slate-500   mr-10 -rotate-90'>
                 </p> */}
-                <div className='-rotate-90 p-10 -my-28'>
+                <div className='w-full -rotate-90 p-10 -my-28'>
                     <Slider slides={members} impact={impact} />
                 </div>
             </div>

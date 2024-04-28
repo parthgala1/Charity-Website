@@ -14,6 +14,7 @@ import AnimatedCursor from 'react-animated-cursor'
 import Member from './pages/Members/Member.jsx'
 import Offer from './pages/Offer/Offer.jsx'
 import Gaushala from './pages/Places/Gaushala.jsx'
+import Orphanage from './pages/Places/Orphanage.jsx'
 
 function App() {
   const { authUser } = useAuthContext()
@@ -54,7 +55,13 @@ function App() {
         } />
         <Route path="/login" element={authUser ? <Navigate to='/' /> : <Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/Gaushala" element={<Gaushala />} />
+        <Route path="/Gaushala" element={
+          <>
+            <Navbar />
+            <Gaushala />
+          </>
+        } />
+        <Route path="/Orphanage" element={<Orphanage />} />
       </Routes>
       {/* <Carousel />
       <Carousel />

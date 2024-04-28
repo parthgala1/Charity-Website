@@ -22,8 +22,8 @@ const Card = ({ member, onDelete }) => {
 
     return (
         <>
-            <div className='w-1/3 my-2 p-5'>
-                <div className='rounded-lg hover:bg-white hover:shadow-lg'>
+            <div className='w-1/5 my-2 p-5'>
+                <div className='rounded-lg border-x-2 hover:bg-white hover:shadow-lg'>
                     <div className='p-4 flex justify-center items-center flex-col relative'>
                         {authUser && authUser.member === 'Member' && (
                             <div className='absolute top-3 right-3'>
@@ -34,9 +34,8 @@ const Card = ({ member, onDelete }) => {
                                 />
                             </div>
                         )}
-                        <img src={member.profilePicture} alt='member' className='w-32 h-32 object-cover object-center rounded-full' />
-                        <h2 className='mt-4 text-2xl font-semibold text-center font-serif'>{member.name}</h2>
-                        <p className='text-gray-600 text-center text-md font-mono'>{member.member}</p>
+                        <img src={member.profilePicture} alt='member' className='w-32 h-32 object-cover object-top rounded-full' />
+                        <h2 className='mt-4 text-2xl font-light text-center font-serif'>{member.name}</h2>
                     </div>
                 </div>
             </div>
