@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        "spin-slow": "spin 4s linear infinite",
+        "spin-slow": "spin 2s linear infinite",
       },
       utilities: {
         "clip-polygon": "clip-path-[polygon(10% 0, 100% 0, 100% 100%, 0 100%)]",

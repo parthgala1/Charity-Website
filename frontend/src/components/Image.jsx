@@ -7,7 +7,7 @@ const Image = () => {
 
 
     const handleScroll = () => {
-        const scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollTop;
         setIsScrolled(scrollHeight > 0);
     };
 

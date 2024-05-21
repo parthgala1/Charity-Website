@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/home/Home'
 import Contact from './pages/contact/Contact'
@@ -15,22 +15,66 @@ import Member from './pages/Members/Member.jsx'
 import Offer from './pages/Offer/Offer.jsx'
 import Gaushala from './pages/Places/Gaushala.jsx'
 import Orphanage from './pages/Places/Orphanage.jsx'
+import Preloader from './components/Preloader.jsx'
 
 function App() {
   const { authUser } = useAuthContext()
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }
+    , [])
 
   return (
     <>
       <Routes>
         <Route path="/" element={
           <div className=' bg-gradient-to-t from-slate-100 to-white'>
+            {loading ? <Preloader />
+              :
+              <>
+
+                <Navbar />
+                <Home />
+                <AboutUs />
+                <Offer />
+                <Impact />
+                <Member />
+                <Contact />
+                <AnimatedCursor
+                  innerSize={15}
+                  outerSize={15}
+                  color='157, 209, 128'
+                  outerAlpha={0.2}
+                  innerScale={0.7}
+                  outerScale={5}
+                  clickables={[
+                    'a',
+                    'input[type="text"]',
+                    'input[type="email"]',
+                    'input[type="number"]',
+                    'input[type="submit"]',
+                    'input[type="image"]',
+                    'label[for]',
+                    'select',
+                    'textarea',
+                    'button',
+                    '.link',
+                  ]} />
+              </>
+            }
+          </div>
+        } />
+        <Route path="/login" element={authUser ? <Navigate to='/' /> : <Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/Gaushala" element={
+          <>
             <Navbar />
-            <Home />
-            <AboutUs />
-            <Offer />
-            <Impact />
-            <Member />
-            <Contact />
+            <Gaushala />
             <AnimatedCursor
               innerSize={15}
               outerSize={15}
@@ -51,17 +95,36 @@ function App() {
                 'button',
                 '.link',
               ]} />
-          </div>
-        } />
-        <Route path="/login" element={authUser ? <Navigate to='/' /> : <Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/Gaushala" element={
-          <>
-            <Navbar />
-            <Gaushala />
+            <Contact />
           </>
         } />
-        <Route path="/Orphanage" element={<Orphanage />} />
+        <Route path="/Orphanage" element={
+          <>
+            <Navbar />
+            <Orphanage />
+            <AnimatedCursor
+              innerSize={15}
+              outerSize={15}
+              color='157, 209, 128'
+              outerAlpha={0.2}
+              innerScale={0.7}
+              outerScale={5}
+              clickables={[
+                'a',
+                'input[type="text"]',
+                'input[type="email"]',
+                'input[type="number"]',
+                'input[type="submit"]',
+                'input[type="image"]',
+                'label[for]',
+                'select',
+                'textarea',
+                'button',
+                '.link',
+              ]} />
+            <Contact />
+          </>
+        } />
       </Routes>
       {/* <Carousel />
       <Carousel />

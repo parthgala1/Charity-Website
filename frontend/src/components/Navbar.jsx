@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { TbLogout2 } from "react-icons/tb";
 import logo from '../assets/logo.png';
 import Home from '../pages/home/Home';
@@ -35,9 +36,7 @@ const Navbar = () => {
                 <p className=' text-3xl font-medium'>Jivam Group</p>
             </div>
             <div className='p-4 flex flex-row justify-center items-center'>
-                <button onClick={() => scrollToComponent('home')} className='text-lg decoration-none px-5'>
-                    Home
-                </button>
+                <Link to="/" className='text-lg decoration-none px-5'>Home</Link>
                 <button onClick={() => scrollToComponent('who-we-are')} className='text-lg decoration-none px-5'>
                     Who We Are
                 </button>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logoWhite from '../../assets/logo_white.png'
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareWhatsapp } from "react-icons/fa6";
@@ -61,21 +62,13 @@ const Contact = () => {
                             </a>
                         </div>
                         <div className='flex flex-col text-center' >
-                            <a href='#home' className='text-lg decoration-none px-5'>
-                                Home
-                            </a>
-                            <a href='#who-we-are' className='decoration-none px-5'>
-                                Who We Are
-                            </a>
-                            <a href='#what-we-do' className='decoration-none px-5'>
-                                What We Offer
-                            </a>
-                            <a href='#details' className='decoration-none px-5'>
-                                Members
-                            </a>
-                            <a href='#contact' className='decoration-none px-5'>
-                                Contact Us
-                            </a>
+                            <Link to="/Gaushala">Gaushala</Link>
+                            <Link to="/Orphanage">Orphanage</Link>
+                            <Link to="/Medical Camp">Medical Camp</Link>
+                            <Link to="/Food Kit">Food Kit</Link>
+                            <Link to="/Bird Feeding">Bird Feeding</Link>
+                            <Link to="/Keediyaro">Keediyaro</Link>
+
                         </div>
                     </div>
                     <div className='my-10 text-white text-xl w-4/5 text-center'>
