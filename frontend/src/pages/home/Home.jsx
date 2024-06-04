@@ -5,8 +5,8 @@ import Image from '../../components/Image'
 
 const Home = () => {
     return (
-        <div id='home' className='h-auto w-full relative ' >
-            <div className="h-screen flex lg:flex-row sm:flex-col justify-between items-center">
+        <div id='home' className='h-auto w-full ' >
+            <div className="h-screen flex lg:flex-row flex-col justify-between items-center">
                 <SubHome />
                 <Image />
             </div>

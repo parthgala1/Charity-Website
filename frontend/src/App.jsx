@@ -25,6 +25,7 @@ function App() {
   const url = window.location.href.split("/");
   const route = url[url.length - 1];
   console.log(route);
+  console.log(window.innerWidth);
 
   useEffect(() => {
     setLoading(true)
