@@ -71,8 +71,8 @@ const Contact = () => {
 
                         </div>
                     </div>
-                    <div className='my-10 text-white text-xl w-4/5 text-center'>
-                        At the heart of Jivam Group are people like you who are willing to get involved by donating or volunteering. Together we can change the world!
+                    <div className='my-5 text-white text-xl w-4/5 text-center'>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.968051961107!2d72.9731779!3d19.196597699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9d69ef5bb81%3A0xb193ec73353b0fa0!2sJivam%20Group!5e0!3m2!1sen!2sin!4v1717507486804!5m2!1sen!2sin" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <a href="https://wa.me/919820988506" target="_blank" className="bg-[#fff] m-2 p-2 text-center rounded-2xl text-[#9f8266] hover:text-[#EFA593] hover:rounded-3xl duration-300 w-1/2">Donate Now</a>
                 </div>

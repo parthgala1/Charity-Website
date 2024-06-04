@@ -6,7 +6,7 @@ import Image from '../../components/Image'
 const Home = () => {
     return (
         <div id='home' className='h-auto w-full relative ' >
-            <div className="h-screen flex justify-between items-center">
+            <div className="h-screen flex lg:flex-row sm:flex-col justify-between items-center">
                 <SubHome />
                 <Image />
             </div>

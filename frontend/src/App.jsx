@@ -16,10 +16,15 @@ import Offer from './pages/Offer/Offer.jsx'
 import Gaushala from './pages/Places/Gaushala.jsx'
 import Orphanage from './pages/Places/Orphanage.jsx'
 import Preloader from './components/Preloader.jsx'
+import Thane from './pages/SubPages/Thane.jsx'
 
 function App() {
   const { authUser } = useAuthContext()
   const [loading, setLoading] = useState(false)
+
+  const url = window.location.href.split("/");
+  const route = url[url.length - 1];
+  console.log(route);
 
   useEffect(() => {
     setLoading(true)
@@ -75,6 +80,33 @@ function App() {
           <>
             <Navbar />
             <Gaushala />
+            <AnimatedCursor
+              innerSize={15}
+              outerSize={15}
+              color='157, 209, 128'
+              outerAlpha={0.2}
+              innerScale={0.7}
+              outerScale={5}
+              clickables={[
+                'a',
+                'input[type="text"]',
+                'input[type="email"]',
+                'input[type="number"]',
+                'input[type="submit"]',
+                'input[type="image"]',
+                'label[for]',
+                'select',
+                'textarea',
+                'button',
+                '.link',
+              ]} />
+            <Contact />
+          </>
+        } />
+        <Route path='/Gaushala/Thane' element={
+          <>
+            <Navbar />
+            <Thane />
             <AnimatedCursor
               innerSize={15}
               outerSize={15}

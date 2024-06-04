@@ -26,7 +26,7 @@ const Image = () => {
 
     return (
         <div className={`w-full h-full flex transition-transform duration-1000 ease-in-out transform ${isScrolled ? 'translate-x-0' : 'translate-x-full'}`}>
-            <img src={image} alt="" className='object-cover object-left clip-polygon' />
+            <img src={image} alt="" className='object-cover object-left clip-polygon lg:clip-none' />
         </div>
     );
 };

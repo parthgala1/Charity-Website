@@ -7,7 +7,7 @@ function Cards({ title, description, imageUrl }) {
   const [stretch, setStretch] = React.useState(false);
 
   const handleSubmit = (title) => () => {
-    history(`/${title}`);
+    history(`./${title}`);
   };
 
   const handleMouseEnter = () => {
