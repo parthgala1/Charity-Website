@@ -26,7 +26,7 @@ const SubHome = () => {
             <div className="flex w-full justify-center items-center">
                 <img src={logo} alt="/" className='h-32 w-32 lg:h-48 lg:w-48' />
                 <div className="flex flex-col items-center ml-4">
-                    <p className='text-4xl lg:text-6xl font-medium font-[Alegreya] text-[#301A0F]'>
+                    <p className='text-3xl lg:text-6xl font-medium font-[Alegreya] text-[#301A0F]'>
                         Jivam Group
                     </p>
                     <p className="text-base lg:text-lg">
@@ -35,7 +35,7 @@ const SubHome = () => {
                 </div>
             </div>
             <div className="mt-2 w-full lg:w-4/5 text-left flex flex-col justify-center ">
-                <p className="text-lg lg:text-4xl font-thin font-serif px-3">
+                <p className="text-xl lg:text-4xl font-thin font-serif px-3">
                     A Small Foundation made for Jivadaya at gaushala, panjrapor and helping needy people like anath ashrams vrudh ashrams just for a simple cause,
                 </p>
                 <a href="https://wa.me/919820988506" target="_blank" rel="noopener noreferrer" className="bg-[#4b2817] mt-6 p-2 text-center rounded-2xl text-white hover:text-[#9f8266] hover:bg-[#301A0F] transform hover:scale-95 transition ease-in-out duration-300">

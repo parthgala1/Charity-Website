@@ -22,7 +22,7 @@ const Card = ({ member, onDelete }) => {
 
     return (
         <>
-            <div className='w-1/5 my-2 p-5'>
+            <div className='w-full md:w-1/5 my-2 p-5'>
                 <div className='rounded-lg border-x-2 hover:bg-white hover:shadow-lg'>
                     <div className='p-4 flex justify-center items-center flex-col relative'>
                         {authUser && authUser.member === 'Member' && (

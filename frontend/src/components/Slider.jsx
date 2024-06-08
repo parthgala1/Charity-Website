@@ -14,10 +14,10 @@ const Slider = ({ slides, impact }) => {
     };
     // console.log(authUser);
     return (
-        <div className="w-3/5 carousel shadow-lg rounded-box">
+        <div className="w-full md:w-3/5 carousel shadow-lg rounded-box">
             {slides.map((item, index) => (
                 <div className="carousel-item w-full" id={index}>
-                    <div className=' flex flex-col justify-center items-center w-auto text-3xl text-center font-[Poppins] font-light relative'>
+                    <div className=' flex flex-col justify-center items-center w-auto md:text-3xl text-center font-[Poppins] font-light relative'>
                         {authUser && authUser.member === "Member" && (
                             <div className='absolute top-3 right-3'>
                                 <CiCircleMinus
@@ -27,7 +27,7 @@ const Slider = ({ slides, impact }) => {
                                 />
                             </div>
                         )}
-                        <div className='w-4/5 m-2 mt-10'>
+                        <div className='w-4/5 m-2 md:mt-10'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ex id quis voluptatem labore! Illum vitae a eveniet ab incidunt expedita delectus natus neque, aliquid ad ex, fugit temporibus nemo!
                         </div>
                         <div className='bg-gray-300 m-5 w-4/5 h-[0.1px] '></div>

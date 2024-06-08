@@ -8,9 +8,20 @@ const Gaushala = () => {
             <div className='my-10 text-3xl font-[Playfair] font-bold'>GAUSHALA</div>
             <div>
                 <Card
-                    title="Thane"
-                    description="lorem ipsum"
-                    imageUrl={image6} />
+                    title="પશુ રક્ષક મંડળ ,  થાણા"
+                    description=""
+                    imageUrl={image6}
+                />
+                <Card
+                    title="તુલસી ગોવર્ધન ગૌશાળા, વસઈ"
+                    description=""
+                    imageUrl={image6}
+                />
+                <Card
+                    title="તુલસી ગોવર્ધન ગૌશાળા, વસઈ"
+                    description=""
+                    imageUrl={image6}
+                />
             </div>
         </div>
     );

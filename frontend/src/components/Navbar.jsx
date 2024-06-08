@@ -38,8 +38,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`mt-0 rounded opacity-75 hover:opacity-100 duration-200 lg:fixed top-0 left-0 right-0 z-50 min-w-96 p-3 m-1 border-collapse border-b-1 border-gray-600 bg-white flex lg:flex-row flex-col justify-between items-center font-[Poppins] ${isScrolled ? 'shadow-lg' : ''}`}>
-            <div className='flex justify-between items-center lg:mx-12'>
+        <div className={` rounded opacity-75 hover:opacity-100 duration-200 lg:fixed top-0 left-0 right-0 z-50 w-full md:min-w-96 md:p-3 md:m-1 mt-4 border-collapse border-b-1 border-gray-600 bg-white flex lg:flex-row flex-col justify-between items-center font-[Poppins] ${isScrolled ? 'shadow-lg' : ''}`}>
+            <div className='flex justify-between items-center md:mx-12'>
                 <img src={logo} alt="/" className='h-12 w-12' />
                 <p className='text-3xl font-medium'>Jivam Group</p>
                 <div className='lg:hidden mx-5'>
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className='h-screen w-full top-16 left-0 flex flex-col items-center lg:hidden z-10'>
+                <div className='h-screen w-auto flex flex-col items-center lg:hidden z-10'>
                     <Link to="/" className='text-lg decoration-none px-5 py-2' onClick={toggleMenu}>Home</Link>
                     <button onClick={() => scrollToComponent('who-we-are')} className='text-lg decoration-none px-5 py-2'>
                         Who We Are

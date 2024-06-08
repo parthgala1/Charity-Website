@@ -24,7 +24,7 @@ function Cards({ title, description, imageUrl }) {
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="max-w-sm rounded-lg overflow-hidden shadow-lg m-4 bg-white hover:bg-gray-100 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-125"
+      className="max-w-sm rounded-lg overflow-hidden shadow-lg m-4 bg-white hover:bg-gray-100 transition duration-500 ease-in-out transform hover:-translate-y-1 md:hover:scale-125"
     >
       <img
         className={`w-full h-auto relative ${blur ? 'transition duration-500 ease-in-out transform blur opacity-75 ' : ''}`}
@@ -33,12 +33,12 @@ function Cards({ title, description, imageUrl }) {
       />
       <div className="w-full h-full px-6 py-4 flex flex-col justify-center items-center absolute z-10 top-0 opacity-0 hover:opacity-100">
         <div className="font-bold text-xl mb-2 text-white font-[Playfair]">{title}</div>
-        <p className="text-gray-200 text-base font-[Crimson]">{description}</p>
+        <p className="text-gray-200 text-balance text-center font-[Crimson]">{description}</p>
         <button
           onMouseEnter={() => setStretch(true)}
           onMouseLeave={() => setStretch(false)}
           onClick={handleSubmit(title)}
-          className={`bg-transparent text-[#4b2817] font-bold py-2 px-4 rounded mt-2 hover:text-gray-200 hover:scale-125 transform transition-all duration-300 font-[Taviraj] w-auto ${stretch ? 'w-full' : ''}`}
+          className={`bg-transparent text-[#4b2817] font-bold py-2 px-4 rounded mt-2 hover:text-[#a35b37] transform transition-all duration-300 font-[Taviraj] w-auto ${stretch ? 'w-full' : ''}`}
         >
           -Know More-
         </button>

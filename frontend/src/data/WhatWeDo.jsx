@@ -4,7 +4,7 @@ import image7 from '../assets/images/image7.jpg'
 
 function App() {
     return (
-        <div className='grid grid-cols-2 gap-5 justify-center items-center' id='h1'>
+        <div className='grid md:grid-cols-2 gap-5 justify-center items-center' id='h1'>
             <Cards
                 title="Gaushala"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat doloribus vitae fugit enim repudiandae"

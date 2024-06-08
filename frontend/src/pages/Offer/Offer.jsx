@@ -5,7 +5,7 @@ import WhatWeDo from '../../data/WhatWeDo'
 const Offer = () => {
     return (
         <div id='what-we-do' className='flex flex-col justify-center items-center w-full'>
-            <div className='text-6xl font-[Poppins] font-bold my-7 content-start'>What We Offer</div>
+            <div className='text-4xl md:text-6xl font-[Poppins] font-bold md:my-7 content-start'>What We Offer</div>
             <WhatWeDo />
         </div>
     )
